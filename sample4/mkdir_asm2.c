@@ -9,7 +9,7 @@ int main() {
         "int $0x80\n\t"
         "movl %%eax, %0\n\t"
         : "=m"(ret)
-        : "b"(dir), "c"(mode)
+        : "b"(dir), "c"(mode)  //b和c分别表示寄存器%ebx和%ecx
     );
     printf("ret is: %d.\n", ret);
     return 0;
